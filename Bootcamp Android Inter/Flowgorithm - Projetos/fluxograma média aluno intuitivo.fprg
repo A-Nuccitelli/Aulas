@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anderson"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-20 11:07:27 "/>
+        <attribute name="created" value="QW5kZXJzb247QU5ERVJTT04tUEM7MjAyMS0wNy0yMDsiMTA6MTM6MjQgIjsyODAw"/>
+        <attribute name="edited" value="QW5kZXJzb247QU5ERVJTT04tUEM7MjAyMS0wNy0yMDsiMTE6MDc6MjcgIjsyOzI5MTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="janeiro, fevereiro, mar&#231;o, abril, media" type="Real" array="False" size=""/>
+            <declare name="resposta, aluno, sobrenomealuno" type="String" array="False" size=""/>
+            <output expression="&quot;Ola professor, vou te auxiliar a calcular a m&#233;dia de cada aluno. Vamos come&#231;ar?&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta= &quot;sim&quot;">
+                <then>
+                    <output expression="&quot;Insira o primeiro nome do Aluno.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <breakpoint/>
+                </else>
+            </if>
+            <input variable="aluno"/>
+            <output expression="&quot;Insira o sobrenome do aluno.&quot;" newline="True"/>
+            <input variable="sobrenomealuno"/>
+            <output expression="&quot;A seguir, insira as notas conforme o m&#234;s correspondente&quot;" newline="True"/>
+            <output expression="&quot;Janeiro&quot;" newline="True"/>
+            <input variable="janeiro"/>
+            <output expression="&quot;Fevereiro&quot;" newline="True"/>
+            <input variable="fevereiro"/>
+            <output expression="&quot;Mar&#231;o&quot;" newline="True"/>
+            <input variable="mar&#231;o"/>
+            <output expression="&quot;Abril&quot;" newline="True"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro+fevereiro+mar&#231;o+abril)/4"/>
+            <output expression="&quot;O aluno &quot; &amp; aluno &amp;&quot; &quot; &amp; sobrenomealuno &amp; &quot; teve a seguinte m&#233;dia: &quot; &amp;media" newline="True"/>
+            <if expression="media&gt;=7">
+                <then>
+                    <output expression="&quot;Parabens! este aluno foi aprovado.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Desculpe! infelizmente esse aluno foi reprovado.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Vamos para o pr&#243;ximo?&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta= &quot;sim&quot;">
+                <then>
+                    <output expression="&quot;Aperte o bot&#227;o 'Iniciar' para continuarmos&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Feche o programa para encerrar.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

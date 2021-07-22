@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Anderson"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-20 01:27:20 "/>
+        <attribute name="created" value="QW5kZXJzb247QU5ERVJTT04tUEM7MjAyMS0wNy0yMDsiMTI6NTY6MjkgIjsyODE0"/>
+        <attribute name="edited" value="QW5kZXJzb247QU5ERVJTT04tUEM7MjAyMS0wNy0yMDsiMDE6Mjc6MjAgIjsxOzI5MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, limite, multiplicador" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ola, eu sou o programa que ensina a tabuada do 9, seja bem vindo e vamos come&#231;ar!&quot;" newline="True"/>
+            <assign variable="numero" expression="0"/>
+            <assign variable="multiplicador" expression="0"/>
+            <assign variable="limite" expression="90"/>
+            <while expression="numero&lt;=limite">
+                <output expression="&quot;9 x &quot; &amp;multiplicador &amp; &quot;=&quot; &amp;(9*multiplicador)" newline="True"/>
+                <assign variable="multiplicador" expression="multiplicador+1"/>
+                <assign variable="numero" expression="numero+9"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
