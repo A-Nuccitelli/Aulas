@@ -25,7 +25,7 @@ document.querySelector('.busca').addEventListener('submit', async (event)=>{
         showWarning('Carregando...');
 
         //declara url para buscar a API (url encontrada no site) e preenche conforme solicitado no manual da API
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=d79ee6b50db72942b6ca32a31e66dae1&units=metric&lang=pt_br`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=(seu token)&units=metric&lang=pt_br`;
         
         //declara results para esperar a função fetch buscar as informações da url
         //declara json para esperar pegar as informações do result e adicionar na variavel json
