@@ -1,0 +1,23 @@
+val a: String = "testDev, camelCase, TESTE"
+var listCharLower: Char = 'a'
+var listCharUpper: Char = 'A'
+var listUpper = mutableListOf('A')
+var listLower = mutableListOf('a')
+var b = a.split(",")
+var b1: Int = 0
+var p1: Int = 0
+
+
+fun main() {
+
+    listCompareUpper()
+
+    for(z in b.last()){ for(y in 0..listUpper.size -1){ if(z.equals(listUpper[y])){b1++}else p1 = 0}}
+    println("Está palavra contem $b1 letra grande")
+    if(b1 >= 1 && b1 <=2){
+        print("Ela pode ser camelCase")
+    }else print("Não pode ser camelCase")
+
+}
+fun listCompareUpper(){ while(listCharUpper != 'Z'){ listUpper.add(++listCharUpper)}}
+fun listCompareLower(){ while(listCharLower != 'z'){ listLower.add(++listCharLower)}}

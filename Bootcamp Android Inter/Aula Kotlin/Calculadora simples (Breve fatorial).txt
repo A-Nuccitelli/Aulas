@@ -1,0 +1,43 @@
+l number2:Number? = 5.2
+var numero1= number1?.toFloat()
+var numero2= number2?.toFloat()
+val conver1 = numero1?.toInt()
+val conver2 = numero2?.toInt()
+var operacao:String = "!"
+var result:Float = 0f
+var resultfat:Int = 0
+var x:Int = 0
+var y:Int = conver1!!
+
+fun main() {
+    if(conver1 == null || conver2 == null || operacao == ""){
+    println("Para começar a calcular, preencha todos os valores no topo e a operação desejada,sendo:")
+    println("+ , para somar"); println("- , para ssubtrair"); println("/ , para dividir"); println("* , para multiplicar")
+    }else {
+        println("Calculando, $numero1 $operacao $numero2 =")
+      when(operacao){
+          in "+" -> somar()
+          in "-" -> subtrair()
+          in "/" -> dividir()
+          in "*" -> multiplicar()
+          in "!" -> fatorial()
+          else -> erro()
+      }
+    }
+    
+}
+
+fun somar(){result = numero1!! + numero2!!; println(result)}
+fun subtrair(){result = numero1!! - numero2!!; println(result)}
+fun dividir(){result = numero1!! / numero2!!; println(result)}
+fun multiplicar(){result = numero1!! * numero2!!; println(result)}
+fun fatorial(){
+    x= conver1!!
+    while(y>1){
+        resultfat = conver1!!
+        resultfat = resultfat *(x-1)
+        y = y-1
+        println(resultfat)
+    }
+}
+fun erro(){println("Insira um operador correto!")}

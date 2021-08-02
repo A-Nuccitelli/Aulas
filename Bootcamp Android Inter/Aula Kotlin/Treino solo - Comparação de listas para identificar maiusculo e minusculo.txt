@@ -1,0 +1,28 @@
+val a: String = "testDev, camelCase, TESTE"
+var stringChar: MutableList<Char> = mutableListOf()
+var listCharLower: Char = 'a'
+var listCharUpper: Char = 'A'
+var listUpper = mutableListOf('A')
+var listLower = mutableListOf('a')
+var maiusculos: Int = 0
+var minusculos: Int = 0
+var pontos: Int = 0
+
+
+
+fun main() {
+	
+    convertString()
+    listCompareUpper()
+    listCompareLower()
+    while(stringChar.size < listUpper.size){stringChar.add(' ')}
+
+    for(z in stringChar){ for(y in 0..listUpper.size -1){ if(z.equals(listUpper[y])){maiusculos++}else pontos = 0}}
+    for(z in stringChar){ for(y in 0..listLower.size -1){ if(z.equals(listLower[y])){minusculos++}else pontos = 0}}    
+    
+	print("$maiusculos e $minusculos ")
+
+}
+fun listCompareUpper(){ while(listCharUpper != 'Z'){ listUpper.add(++listCharUpper)}}
+fun listCompareLower(){ while(listCharLower != 'z'){ listLower.add(++listCharLower)}}
+fun convertString(){for (convertChar in a) stringChar.add(convertChar)}
